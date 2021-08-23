@@ -16,6 +16,10 @@ There are pads on the bottom in case you'd like to add an WS2812B strip. To buil
 
 ![Phoenix45 RGB](https://i.imgur.com/JUQ0fiy.jpeg)
 
+Make sure you edit rgb/config.h to specify the number of LEDs.
+
+    #define RGBLED_NUM 13
+
 To build the RGB version:
 
     make phoenix45/rgb:default
