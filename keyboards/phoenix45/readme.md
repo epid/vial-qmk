@@ -23,5 +23,13 @@ Make sure you edit rgb/config.h to specify the number of LEDs.
 To build the RGB version:
 
     make phoenix45/rgb:default
+=======
+There are pads on the bottom in case you'd like to add an WS2812B strip. To build the RGB version:
+
+    make phoenix45/rgb:default
+
+Flashing example for this keyboard:
+
+    make phoenix45:default:flash
 
 See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_tools) and the [make instructions](https://docs.qmk.fm/#/getting_started_make_guide) for more information. Brand new to QMK? Start with our [Complete Newbs Guide](https://docs.qmk.fm/#/newbs).
