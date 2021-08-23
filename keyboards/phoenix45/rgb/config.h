@@ -21,6 +21,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
   #define RGBLIGHT_LIMIT_VAL 255 // Maximum brightness
   #define RGBLIGHT_SLEEP         // RGB lighting will be switched off when the host goes to sleep
 
+  #define RGBLIGHT_HUE_STEP 8
+  #define RGBLIGHT_SAT_STEP 8
+  #define RGBLIGHT_VAL_STEP 8
+
+//#define RGBLIGHT_ANIMATIONS
   #define RGBLIGHT_EFFECT_BREATHING
   #define RGBLIGHT_EFFECT_RAINBOW_MOOD
   #define RGBLIGHT_EFFECT_RAINBOW_SWIRL
@@ -32,14 +37,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
   #define RGBLIGHT_EFFECT_ALTERNATING
 #endif
 
-// #define RGBLIGHT_HUE_STEP 8
-// #define RGBLIGHT_SAT_STEP 8
-// #define RGBLIGHT_VAL_STEP 8
-/*== all animations enable ==*/
-// #define RGBLIGHT_ANIMATIONS
+
 /*== customize breathing effect ==*/
 /*==== (DEFAULT) use fixed table instead of exp() and sin() ====*/
-// #define RGBLIGHT_BREATHE_TABLE_SIZE 256      // 256(default) or 128 or 64
+#define RGBLIGHT_BREATHE_TABLE_SIZE 128      // 256(default) or 128 or 64
 /*==== use exp() and sin() ====*/
 // #define RGBLIGHT_EFFECT_BREATHE_CENTER 1.85  // 1 to 2.7
 // #define RGBLIGHT_EFFECT_BREATHE_MAX    255   // 0 to 255
