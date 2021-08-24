@@ -10,7 +10,7 @@ A compact 45% keyboard based on the [JD45](https://github.com/qmk/qmk_firmware/t
 
 Make example for this keyboard (after setting up your build environment):
 
-    make phoenix45:default
+    make aeternus/phoenix45:default
 
 There are pads on the bottom in case you'd like to add RGB leds for underglow.
 
@@ -22,6 +22,6 @@ Make sure you edit rgb/config.h to specify the number of LEDs.
 
 To build the RGB version:
 
-    make phoenix45/rgb:default
+    make aeternus/phoenix45/rgb:default
 
 See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_tools) and the [make instructions](https://docs.qmk.fm/#/getting_started_make_guide) for more information. Brand new to QMK? Start with our [Complete Newbs Guide](https://docs.qmk.fm/#/newbs).
