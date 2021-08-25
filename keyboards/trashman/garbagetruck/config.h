@@ -32,7 +32,7 @@ SOFTWARE.
 #define MATRIX_ROWS 8
 #define MATRIX_COLS 8
 #define MATRIX_ROW_PINS { F0, F1, F4, F5, B7, D2, D3, B4 }
-#define MATRIX_COL_PINS { B2, B3, D5, B5, B6, C6, F7, F7 }
+#define MATRIX_COL_PINS { B2, B3, D5, B5, B6, C6, F7, F6 }
 #define DIODE_DIRECTION COL2ROW
 
 #define ENCODERS_PAD_A { B0 }
