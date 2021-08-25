@@ -20,11 +20,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
-#define VENDOR_ID 0xFEED
-#define PRODUCT_ID 0x0000
+#define VENDOR_ID  0x0E0D
+#define PRODUCT_ID 0xBABE
 #define DEVICE_VER 0x0001
 #define MANUFACTURER Eye Oh Designs
-#define PRODUCT babyv
+#define PRODUCT BabyV
 
 /* key matrix size */
 #define MATRIX_ROWS 4
