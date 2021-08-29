@@ -49,18 +49,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     }
   }
   switch(keycode) {
-    case KC_F23:
-      if (record->event.pressed) {
-        layer_leds ^= 1;
-        writePinLow(F5);
-        writePinLow(F6);
-        writePinLow(F7);
-      }
-      return false; break;
     case KC_F24:
       if (record->event.pressed) {
         spongebob_mode ^= 1;
-        spongebob_mode ? writePinHigh(F5) : writePinLow(F5);
       }
       return false; break;
   }
