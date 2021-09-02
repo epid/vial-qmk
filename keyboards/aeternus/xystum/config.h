@@ -55,6 +55,7 @@ B0, which is unconnected on the PCB
 
 #define ENCODERS_PAD_A { A7 }
 #define ENCODERS_PAD_B { C5 }
+#define ENCODER_RESOLUTION 2
 
 // #define MUSIC_MAP
 // #undef AUDIO_VOICES
@@ -67,6 +68,7 @@ B0, which is unconnected on the PCB
 #define RGB_DI_PIN B15
 #define RGBLED_NUM 2
 #define DRIVER_LED_TOTAL RGBLED_NUM
+#define WS2812_BYTE_ORDER WS2812_BYTE_ORDER_RGB
 
 // #define WS2812_PWM_DRIVER PWMD2
 // #define WS2812_PWM_CHANNEL 2
