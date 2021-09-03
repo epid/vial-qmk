@@ -52,14 +52,12 @@ const rgblight_segment_t PROGMEM l0_layer[] = RGBLIGHT_LAYER_SEGMENTS({0, 2, HSV
 const rgblight_segment_t PROGMEM l1_layer[] = RGBLIGHT_LAYER_SEGMENTS({0, 1, HSV_PURPLE}); // LED1
 const rgblight_segment_t PROGMEM l2_layer[] = RGBLIGHT_LAYER_SEGMENTS({1, 1, HSV_PURPLE}); // LED2
 const rgblight_segment_t PROGMEM l3_layer[] = RGBLIGHT_LAYER_SEGMENTS({0, 2, HSV_PURPLE}); // LED1&2
-const rgblight_segment_t PROGMEM sb_mode[]  = RGBLIGHT_LAYER_SEGMENTS({0, 2, HSV_RED});
 
 const rgblight_segment_t* const PROGMEM my_rgb_layers[] = RGBLIGHT_LAYERS_LIST(
   l0_layer,
   l1_layer,
   l2_layer,
-  l3_layer,
-  sb_mode
+  l3_layer
 );
 
 void keyboard_post_init_user(void) {
@@ -78,33 +76,9 @@ layer_state_t layer_state_set_user(layer_state_t state) {
   rgblight_set_layer_state(1, layer_state_cmp(state, 1));
   rgblight_set_layer_state(2, layer_state_cmp(state, 2));
   rgblight_set_layer_state(3, layer_state_cmp(state, 3));
-  rgblight_set_layer_state(4, spongebob_mode);
   return state;
 }
 
 bool led_update_user(led_t led_state) {
-  return true;
-}
-
-/* SpOnGeBoB tExT */
-bool spongebob_case = false;
-bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-  if (spongebob_mode) {
-    switch(keycode) {
-      case KC_A...KC_Z:
-        if (record->event.pressed) {
-          (spongebob_case ^= 1) == 0 ? tap_code16(S(keycode)) : tap_code(keycode);
-          return false; break;
-        }
-    }
-  }
-  switch(keycode) {
-    case KC_F24:
-      if (record->event.pressed) {
-        spongebob_mode ^= 1;
-        layer_state_set_user(layer_state);
-      }
-      return false; break;
-  }
   return true;
 }
