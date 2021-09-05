@@ -66,8 +66,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 bool spongebob_mode = false;
 
 const rgblight_segment_t PROGMEM l0_layer[] = RGBLIGHT_LAYER_SEGMENTS({0, 2, HSV_OFF });   // OFF
-const rgblight_segment_t PROGMEM l1_layer[] = RGBLIGHT_LAYER_SEGMENTS({0, 1, HSV_PURPLE}); // LED1
-const rgblight_segment_t PROGMEM l2_layer[] = RGBLIGHT_LAYER_SEGMENTS({1, 1, HSV_PURPLE}); // LED2
+const rgblight_segment_t PROGMEM l1_layer[] = RGBLIGHT_LAYER_SEGMENTS({0, 1, HSV_RED});    // LED1
+const rgblight_segment_t PROGMEM l2_layer[] = RGBLIGHT_LAYER_SEGMENTS({1, 1, HSV_GREEN});  // LED2
 const rgblight_segment_t PROGMEM l3_layer[] = RGBLIGHT_LAYER_SEGMENTS({0, 2, HSV_PURPLE}); // LED1&2
 const rgblight_segment_t PROGMEM l4_layer[] = RGBLIGHT_LAYER_SEGMENTS({0, 1, HSV_BLUE});   // LED1
 const rgblight_segment_t PROGMEM l5_layer[] = RGBLIGHT_LAYER_SEGMENTS({1, 1, HSV_BLUE});   // LED2
