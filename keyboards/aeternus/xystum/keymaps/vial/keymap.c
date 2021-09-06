@@ -46,11 +46,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   )
 };
 
-bool spongebob_mode = false;
-
-const rgblight_segment_t PROGMEM l0_layer[] = RGBLIGHT_LAYER_SEGMENTS({0, 2, HSV_OFF }); // OFF
-const rgblight_segment_t PROGMEM l1_layer[] = RGBLIGHT_LAYER_SEGMENTS({0, 1, HSV_PURPLE}); // LED1
-const rgblight_segment_t PROGMEM l2_layer[] = RGBLIGHT_LAYER_SEGMENTS({1, 1, HSV_PURPLE}); // LED2
+const rgblight_segment_t PROGMEM l0_layer[] = RGBLIGHT_LAYER_SEGMENTS({0, 2, HSV_OFF   }); // OFF
+const rgblight_segment_t PROGMEM l1_layer[] = RGBLIGHT_LAYER_SEGMENTS({0, 1, HSV_RED   }); // LED1
+const rgblight_segment_t PROGMEM l2_layer[] = RGBLIGHT_LAYER_SEGMENTS({1, 1, HSV_GREEN }); // LED2
 const rgblight_segment_t PROGMEM l3_layer[] = RGBLIGHT_LAYER_SEGMENTS({0, 2, HSV_PURPLE}); // LED1&2
 
 const rgblight_segment_t* const PROGMEM my_rgb_layers[] = RGBLIGHT_LAYERS_LIST(
@@ -70,7 +68,6 @@ layer_state_t default_layer_state_set_user(layer_state_t state) {
   rgblight_set_layer_state(0, layer_state_cmp(state, 0));
   return state;
 }
-
 
 layer_state_t layer_state_set_user(layer_state_t state) {
   rgblight_set_layer_state(1, layer_state_cmp(state, 1));
