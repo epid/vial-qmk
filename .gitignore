@@ -80,4 +80,4 @@ __pycache__
 /util/fmpp*
 
 # Allow to exist but don't include it in the repo
-user_song_list.h
+#user_song_list.h
