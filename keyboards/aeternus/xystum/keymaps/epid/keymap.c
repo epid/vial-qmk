@@ -19,25 +19,28 @@
 #define LY2_SPC LT(2, KC_SPC)
 #define CTL_ESC LCTL_T(KC_ESC)
 
-float s1[][2] = SONG(ZELDA_PUZZLE);
-/*
-float s2[][2] = SONG(ZELDA_TREASURE);
-float s3[][2] = SONG(MARIO_THEME);
-float s4[][2] = SONG(MARIO_GAMEOVER);
-float s5[][2] = SONG(IMPERIAL_MARCH);
-*/
+/* Discord shortcuts */
+#define DSC_RED S(KC_ESC)    // Mark all as read
+#define DSC_PRV LSA(KC_UP)   // Prev unread channel
+#define DSC_NXT LSA(KC_DOWN) // Next unread channel
+
+float s0[][2] = SONG(ZELDA_PUZZLE);
+float s1[][2] = SONG(ZELDA_TREASURE);
+float s2[][2] = SONG(MARIO_THEME);
+float s3[][2] = SONG(MARIO_GAMEOVER);
+float s4[][2] = SONG(IMPERIAL_MARCH);
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT(\
-    KC_MUTE,   RGB_TOG,                                                                         MO(4)  , MO(5)  , KC_F24 ,
-    KC_HOME,   KC_TAB , KC_Q   , KC_W   , KC_E   , KC_R   , KC_T   , KC_Y   , KC_U   , KC_I   , KC_O   , KC_P   , KC_BSPC,
-    KC_END ,   CTL_ESC, KC_A   , KC_S   , KC_D   , KC_F   , KC_G   , KC_H   , KC_J   , KC_K   , KC_L   , KC_SCLN, KC_QUOT,
+    KC_MUTE,   DSC_RED,                                                                         TG(4)  , TG(5)  , KC_F24 ,
+    DSC_PRV,   KC_TAB , KC_Q   , KC_W   , KC_E   , KC_R   , KC_T   , KC_Y   , KC_U   , KC_I   , KC_O   , KC_P   , KC_BSPC,
+    DSC_NXT ,  CTL_ESC, KC_A   , KC_S   , KC_D   , KC_F   , KC_G   , KC_H   , KC_J   , KC_K   , KC_L   , KC_SCLN, KC_QUOT,
     KC_PGUP,   KC_LSPO, KC_Z   , KC_X   , KC_C   , KC_V   , KC_B   , KC_N   , KC_M   , KC_COMM, KC_DOT , KC_SLSH, KC_RSPC,
     KC_PGDN,   KC_LCTL, KC_LGUI, KC_LALT, _______, _______, LY1_ENT, _______, LY2_SPC, _______, MO(3)  , _______, KC_RGUI
   ),
   [1] = LAYOUT(\
     _______,   _______,                                                                         _______, _______, _______,
-    _______,   KC_TILD, KC_EXLM, KC_AT  , KC_HASH, KC_DLR , KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, _______,
+    _______,   KC_TILD, KC_EXLM, KC_AT  , KC_HASH, KC_DLR , KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_DEL ,
     _______,   _______, _______,C(KC_F4),A(KC_F4), _______, _______, KC_MINS, KC_EQL , KC_LCBR, KC_RCBR, KC_PIPE, KC_TILD,
     _______,   _______, _______, _______, _______, _______, _______, KC_UNDS, KC_PLUS, KC_LBRC, KC_RBRC, KC_BSLS, KC_GRV ,
     _______,   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
@@ -45,23 +48,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [2] = LAYOUT(\
     _______,   _______,                                                                         _______, _______, _______,
     _______,   _______, KC_1   , KC_2   , KC_3   , KC_4   , KC_5   , KC_6   , KC_7   , KC_8   , KC_9   , KC_0   , _______,
-    _______,   _______, _______, _______, _______, _______, _______, KC_LEFT, KC_DOWN, KC_UP  , KC_RGHT, KC_PGUP, KC_HOME,
-    _______,   _______, _______, _______, _______, _______, _______, _______, KC_LEFT, KC_DOWN, KC_RGHT, KC_PGDN, KC_END ,
-    _______,   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
+    _______,   _______, KC_F1  , KC_F2  , KC_F3  , KC_F4  , KC_F5  , KC_LEFT, KC_DOWN, KC_UP  , KC_RGHT, KC_PGUP, KC_HOME,
+    _______,   _______, KC_F6  , KC_F7  , KC_F8  , KC_F9  , KC_F10 , _______, KC_LEFT, KC_DOWN, KC_RGHT, KC_PGDN, KC_END ,
+    _______,   _______, KC_F11 , KC_F12 , _______, _______, _______, _______, _______, _______, _______, _______, _______
   ),
   [3] = LAYOUT(\
     _______,   RESET  ,                                                                         _______, _______, _______,
     USER01 ,   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
-    USER02 ,   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
-    USER03 ,   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
+    USER02 ,   RGB_TOG, _______, _______, _______, _______, _______, _______, _______, _______, DSC_RED, DSC_PRV, KC_PGUP,
+    USER03 ,   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, DSC_NXT, KC_PGDN,
     USER04 ,   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
   ),
   [4] = LAYOUT(\
     _______,   _______,                                                                         _______, _______, _______,
-    USER01 ,   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
-    USER02 ,   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
-    USER03 ,   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
-    USER04 ,   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
+    _______,   _______, _______, _______, _______, _______, _______, _______, KC_7   , KC_8   , KC_9   , _______, _______,
+    _______,   _______, _______, _______, _______, _______, _______, _______, KC_4   , KC_5   , KC_6   , _______, _______,
+    _______,   _______, _______, _______, _______, _______, _______, _______, KC_1   , KC_2   , KC_3   , _______, _______,
+    _______,   _______, _______, _______, _______, _______, _______, _______, KC_0   , KC_DOT , _______, _______, _______
   ),
   [5] = LAYOUT(\
     _______,   _______,                                                                         _______, _______, _______,
@@ -131,28 +134,28 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     }
   }
   switch(keycode) {
-/*
+
     case USER00:
-      if (record->event.pressed) { PLAY_SONG(s1); }
+      if (record->event.pressed) { PLAY_SONG(s0); }
       return false; break;
     case USER01:
-      if (record->event.pressed) { PLAY_SONG(s2); }
+      if (record->event.pressed) { PLAY_SONG(s1); }
       return false; break;
     case USER02:
-      if (record->event.pressed) { PLAY_SONG(s3); }
+      if (record->event.pressed) { PLAY_SONG(s2); }
       return false; break;
     case USER03:
-      if (record->event.pressed) { PLAY_SONG(s4); }
+      if (record->event.pressed) { PLAY_SONG(s3); }
       return false; break;
     case USER04:
-      if (record->event.pressed) { PLAY_SONG(s5); }
+      if (record->event.pressed) { PLAY_SONG(s4); }
       return false; break;
-*/
+
     case KC_F24:
       if (record->event.pressed) {
         spongebob_mode ^= 1;
         layer_state_set_user(layer_state);
-	if (spongebob_mode) { PLAY_SONG(s1); }
+	if (spongebob_mode) { PLAY_SONG(s0); }
       }
       return false; break;
   }
