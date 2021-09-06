@@ -62,8 +62,8 @@ B0, which is unconnected on the PCB
 // // Note: following undef isn't really necessary on STM32, C6_AUDIO is AVR related
 // #undef C6_AUDIO
 
-// #define AUDIO_PIN A4
-// #define AUDIO_PIN_ALT A5
+#define AUDIO_PIN A4
+//#define AUDIO_PIN_ALT A5
 
 #define RGB_DI_PIN B15
 #define RGBLED_NUM 2
