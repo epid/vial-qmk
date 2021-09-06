@@ -66,9 +66,9 @@
 
 // ws2812 options
 #define RGB_DI_PIN B7
-#define RGBLIGHT_ANIMATIONS     // run RGB animations
-#define RGBLED_NUM 47           // number of LEDs
-//#define DRIVER_LED_TOTAL 47     // number of LEDs
+//#define RGBLIGHT_ANIMATIONS     // run RGB animations
+//#define RGBLED_NUM 47           // number of LEDs
+#define DRIVER_LED_TOTAL 47     // number of LEDs
 #define RGBLIGHT_LIMIT_VAL 200  // Limit LED brightness
 #define RGBLIGHT_HUE_STEP 12    // units to step when in/decreasing hue
 #define RGBLIGHT_SAT_STEP 12    // units to step when in/decresing saturation
