@@ -15,16 +15,19 @@
  */
 #include QMK_KEYBOARD_H
 
-#define LY1_SPC LT(1, KC_SPC)
-#define LY2_ENT LT(2, KC_ENT)
+#define LY1_ENT LT(1, KC_ENT)
+#define LY2_SPC LT(2, KC_SPC)
 #define CTL_ESC LCTL_T(KC_ESC)
+
+float song1[][2] = SONG(ZELDA_PUZZLE);
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT(\
     KC_MUTE,   RGB_TOG,                                                                         MO(4)  , MO(5)  , KC_F24 ,
     KC_HOME,   KC_TAB , KC_Q   , KC_W   , KC_E   , KC_R   , KC_T   , KC_Y   , KC_U   , KC_I   , KC_O   , KC_P   , KC_BSPC,
     KC_END ,   CTL_ESC, KC_A   , KC_S   , KC_D   , KC_F   , KC_G   , KC_H   , KC_J   , KC_K   , KC_L   , KC_SCLN, KC_QUOT,
     KC_PGUP,   KC_LSPO, KC_Z   , KC_X   , KC_C   , KC_V   , KC_B   , KC_N   , KC_M   , KC_COMM, KC_DOT , KC_SLSH, KC_RSPC,
-    KC_PGDN,   KC_LCTL, KC_LGUI, KC_LALT, _______, _______, LY1_SPC, _______, LY2_ENT, _______, MO(3)  , KC_UP  , KC_RGHT
+    KC_PGDN,   KC_LCTL, KC_LGUI, KC_LALT, _______, _______, LY1_ENT, _______, LY2_SPC, _______, MO(3)  , _______, KC_RGUI
   ),
   [1] = LAYOUT(\
     _______,   _______,                                                                         _______, _______, _______,
@@ -126,6 +129,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       if (record->event.pressed) {
         spongebob_mode ^= 1;
         layer_state_set_user(layer_state);
+	if (spongebob_mode) { PLAY_SONG(song1); }
       }
       return false; break;
   }

@@ -57,13 +57,10 @@ B0, which is unconnected on the PCB
 #define ENCODERS_PAD_B { C5 }
 #define ENCODER_RESOLUTION 2
 
-// #define MUSIC_MAP
-// #undef AUDIO_VOICES
-// // Note: following undef isn't really necessary on STM32, C6_AUDIO is AVR related
-// #undef C6_AUDIO
-
+// Speaker 1
 #define AUDIO_PIN A4
-//#define AUDIO_PIN_ALT A5
+// Speaker 2
+// #define AUDIO_PIN A5
 
 #define RGB_DI_PIN B15
 #define RGBLED_NUM 2
