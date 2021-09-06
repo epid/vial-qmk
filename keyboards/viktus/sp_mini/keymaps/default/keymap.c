@@ -94,7 +94,7 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     return state;
 }
 
-void encoder_update_user(uint8_t index, bool clockwise) {
+bool encoder_update_user(uint8_t index, bool clockwise) {
     if (index == 0) { /* First encoder */
         if (clockwise) {
             tap_code(KC_PGDN);
@@ -108,6 +108,7 @@ void encoder_update_user(uint8_t index, bool clockwise) {
         tap_code(KC_VOLD);
         }
     }
+    return true;
 }
 
 bool spongebob_mode = false;
