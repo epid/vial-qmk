@@ -61,7 +61,7 @@
     Q__NOTE(_C5), \
     H__NOTE(_E5), \
     W__NOTE(_G5), \
-    Q__NOTE(_G4),
+    HD_NOTE(_G4),
 
 #define MARIO_GAMEOVER \
     HD_NOTE(_C5 ), \
