@@ -15,6 +15,7 @@
  */
 #include QMK_KEYBOARD_H
 
+/* Layer stuff */
 #define LY1_ENT LT(1, KC_ENT)
 #define LY2_SPC LT(2, KC_SPC)
 #define CTL_ESC LCTL_T(KC_ESC)
@@ -24,6 +25,7 @@
 #define DSC_PRV LSA(KC_UP)   // Prev unread channel
 #define DSC_NXT LSA(KC_DOWN) // Next unread channel
 
+/* Audio stuff */
 float s0[][2] = SONG(ZELDA_PUZZLE);
 float s1[][2] = SONG(ZELDA_TREASURE);
 float s2[][2] = SONG(MARIO_THEME);
