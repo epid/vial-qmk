@@ -22,10 +22,13 @@ UNICODE_ENABLE = no        # Unicode
 BLUETOOTH_ENABLE = no      # Enable Bluetooth with the Adafruit EZ-Key HID
 AUDIO_ENABLE = yes         # Audio output on port C6
 FAUXCLICKY_ENABLE = no     # Use buzzer to emulate clicky switches
+SLEEP_LED_ENABLE = no      # Breathing sleep LED during USB suspend
 ENCODER_ENABLE = yes
 
 WS2812_DRIVER = bitbang
 
 AUDIO_DRIVER = pwm_software
 
-SLEEP_LED_ENABLE = no      # Breathing sleep LED during USB suspend
+
+# Enter lower-power sleep mode when on the ChibiOS idle thread
+OPT_DEFS += -DCORTEX_ENABLE_WFI_IDLE=TRUE

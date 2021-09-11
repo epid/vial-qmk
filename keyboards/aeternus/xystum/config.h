@@ -22,6 +22,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MANUFACTURER    Aeternus
 #define PRODUCT         Xystum
 
+#define VIAL_KEYBOARD_UID {0x61, 0x6A, 0xE0, 0x65, 0x45, 0x04, 0x11, 0xD3}
+
 /* key matrix size */
 #define MATRIX_ROWS 5
 #define MATRIX_COLS 13
@@ -59,6 +61,7 @@ B0, which is unconnected on the PCB
 
 // Speaker 1
 #define AUDIO_PIN A4
+#define AUDIO_PIN_ALT A5
 // Speaker 2
 // #define AUDIO_PIN A5
 
