@@ -72,6 +72,10 @@ B0, which is unconnected on the PCB
 #define DRIVER_LED_TOTAL RGBLED_NUM
 #define WS2812_BYTE_ORDER WS2812_BYTE_ORDER_RGB
 
+// SPI RGB
+#define WS2812_SPI SPID2
+#define WS2812_SPI_MOSI_PAL_MODE 5  // default 5
+
 // #define WS2812_PWM_DRIVER PWMD2
 // #define WS2812_PWM_CHANNEL 2
 // #define WS2812_PWM_PAL_MODE 1

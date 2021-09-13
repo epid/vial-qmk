@@ -61,7 +61,9 @@ const rgblight_segment_t* const PROGMEM my_rgb_layers[] = RGBLIGHT_LAYERS_LIST(
 void keyboard_post_init_user(void) {
   // Enable the LED layers
   rgblight_layers = my_rgb_layers;
-  layer_state_set_user(layer_state);
+  sethsv(HSV_OFF, (LED_TYPE *)&led[0]); // LED 1 off
+  sethsv(HSV_OFF, (LED_TYPE *)&led[1]); // LED 2 off
+  rgblight_set();                       // Flash buffer to LEDs
 }
 
 layer_state_t default_layer_state_set_user(layer_state_t state) {

@@ -16,6 +16,7 @@ SLEEP_LED_ENABLE = no      # Breathing sleep LED during USB suspend
 # if this doesn't work, see here: https://github.com/tmk/tmk_keyboard/wiki/FAQ#nkro-doesnt-work
 NKRO_ENABLE = no           # USB Nkey Rollover
 BACKLIGHT_ENABLE = no      # Enable keyboard backlight functionality on B7 by default
+SLEEP_LED_ENABLE = no      # Breathing sleep LED during USB suspend
 RGBLIGHT_ENABLE = yes      # Enable keyboard RGB underglow
 MIDI_ENABLE = no           # MIDI support
 UNICODE_ENABLE = no        # Unicode
@@ -24,7 +25,6 @@ AUDIO_ENABLE = yes         # Audio output on port A4
 FAUXCLICKY_ENABLE = no     # Use buzzer to emulate clicky switches
 ENCODER_ENABLE = yes
 
-WS2812_DRIVER = bitbang
+WS2812_DRIVER = spi
 AUDIO_DRIVER = pwm_software
 
-SLEEP_LED_ENABLE = no      # Breathing sleep LED during USB suspend
