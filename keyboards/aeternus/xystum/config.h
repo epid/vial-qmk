@@ -62,6 +62,7 @@ B0, which is unconnected on the PCB
 // Speaker 1
 #define AUDIO_PIN A4
 #define AUDIO_PIN_ALT A5
+#define AUDIO_PIN_ALT_AS_NEGATIVE
 // Speaker 2
 // #define AUDIO_PIN A5
 
@@ -77,7 +78,6 @@ B0, which is unconnected on the PCB
 // #define WS2812_DMA_CHANNEL 2
 
 #define RGBLIGHT_ANIMATIONS
-
 
 /* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
 #define DEBOUNCE 5
