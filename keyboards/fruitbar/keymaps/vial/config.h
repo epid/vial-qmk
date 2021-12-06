@@ -1,0 +1,7 @@
+#define VIAL_KEYBOARD_UID {0x7E, 0x3D, 0x4E, 0xE1, 0x00, 0x5C, 0x3F, 0xBF}
+
+#define VIAL_UNLOCK_COMBO_ROWS { 0, 3 }
+#define VIAL_UNLOCK_COMBO_COLS { 4, 8 }
+
+//#define DYNAMIC_KEYMAP_LAYER_COUNT 4
+//#define LAYER_STATE_8BIT
