@@ -2,7 +2,7 @@
     "name": "synapse", 
     "vendorId": "0x7170",
     "productId": "0x5359",
-    "lighting": "none",
+    "lighting": "qmk_rgblight",
     "matrix": {"rows": 4, "cols": 12},
     "layouts": {
         "labels":[

@@ -52,8 +52,14 @@
 
 #define LOCKING_SUPPORT_ENABLE
 
-//#define RGB_DI_PIN D5
-//#define RGBLED_NUM 4
+#define RGB_DI_PIN D5
+#ifdef RGB_DI_PIN
+    #define RGBLIGHT_ANIMATIONS
+    #define RGBLED_NUM 6
+    #define RGBLIGHT_HUE_STEP 8
+    #define RGBLIGHT_SAT_STEP 8
+    #define RGBLIGHT_VAL_STEP 8
+#endif
 
 //#define DRIVER_LED_TOTAL RGBLED_NUM
 //#define RGBLIGHT_DEFAULT_HUE 130
