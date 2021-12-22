@@ -1,0 +1,8 @@
+VIA_ENABLE = yes
+VIAL_ENABLE = yes
+LTO_ENABLE = yes
+
+BOOTLOADER = atmel-dfu
+RGBLIGHT_ENABLE = no
+
+VIAL_INSECURE = yes
